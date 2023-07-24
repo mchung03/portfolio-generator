@@ -1,0 +1,18 @@
+* {
+    font-family: 'Poppins';
+}
+
+.greeting {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.bio {
+    display: flex;
+    justify-content: center;
+}
+
+.bio {
+    margin-bottom: 4rem;
+}
