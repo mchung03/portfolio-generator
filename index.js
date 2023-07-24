@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-//const generatePortfolio = require("./generateportfolio");
+const generatePortfolio = require("./generateportfolio");
 //const fs = require("fs");
 
 const questions =[
@@ -33,4 +33,11 @@ const questions =[
 function init (){
     inquirer 
     .prompt(questions)
+    .then((answers) => {
+        console.log(answers)
+        let portfolio = generatePortfolio(answers)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
 }
