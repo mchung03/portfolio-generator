@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const generatePortfolio = require("./generateportfolio");
-//const fs = require("fs");
+const fs = require("fs");
 
 const questions =[
     {
@@ -36,8 +36,14 @@ function init (){
     .then((answers) => {
         console.log(answers)
         let portfolio = generatePortfolio(answers)
+        fs.writeFile('index.html', portfolio, (err) => {
+            if(err) throw err;
+            console.log("The file has been created")
+        })
     })
     .catch((error) => {
         console.log(error)
     })
 }
+
+init()

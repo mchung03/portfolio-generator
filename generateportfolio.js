@@ -13,15 +13,15 @@ function generatePortfolio(data){
 
     <body>
         <div class="greeting">
-            <h2>Hello, <span id="name">${data.name}</span> from <span id="location">${data.location}</span></h2>
+            <h2>Hello, ${data.name} from ${data.location}</h2>
         </div>
         <div class="bio">
             <h4>${data.bio}</h4>
         </div>
         <div class="information">
             <ul class="list-group">
-                <li class="list-group-item">LinkedIn URL: <span id="linkedin">${data.linkedin}</span></li>
-                <li class="list-group-item">GitHub URL: <span id="github">${data.github}</span></li>
+                <li class="list-group-item">LinkedIn URL: ${data.linkedin}</li>
+                <li class="list-group-item">GitHub URL: ${data.github}</li>
             </ul>
         </div>
     </body>
